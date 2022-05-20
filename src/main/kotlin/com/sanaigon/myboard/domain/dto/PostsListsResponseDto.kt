@@ -1,6 +1,6 @@
-package com.sanaigon.myboard.api.dto
+package com.sanaigon.myboard.domain.dto
 
-import com.sanaigon.myboard.domain.Posts
+import com.sanaigon.myboard.domain.entity.Posts
 import java.time.LocalDateTime
 
 data class PostsListsResponseDto(

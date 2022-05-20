@@ -1,9 +1,9 @@
-package com.sanaigon.myboard.domain
+package com.sanaigon.myboard.domain.entity
 
 import javax.persistence.*
 
 @Entity
-class Posts (
+class Posts(
     @Column(length = 500, nullable = false)
     var title: String,
     @Column(columnDefinition = "TEXT", nullable = false)
@@ -13,4 +13,3 @@ class Posts (
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     var id: Long? = null
 }
-

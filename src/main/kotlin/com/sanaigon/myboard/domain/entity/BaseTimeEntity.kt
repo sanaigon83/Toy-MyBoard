@@ -1,4 +1,4 @@
-package com.sanaigon.myboard.domain
+package com.sanaigon.myboard.domain.entity
 
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate

@@ -1,6 +1,6 @@
 package com.sanaigon.myboard.service
 
-import com.sanaigon.myboard.api.dto.*
+import com.sanaigon.myboard.domain.dto.*
 import com.sanaigon.myboard.repository.PostRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
@@ -21,7 +21,6 @@ class PostsService(private val postRepository: PostRepository) {
             it.id
         } ?: throw java.util.NoSuchElementException("NoSuch $id")
 
-
     fun findById(id: Long): PostsResponseDto =
         postRepository.findByIdOrNull(id)?.let {
             PostsResponseDto(it.id!!, it.title, it.content, it.author)
@@ -30,6 +29,5 @@ class PostsService(private val postRepository: PostRepository) {
     @Transactional(readOnly = true)
     fun findAllDesc(): List<PostsListsResponseDto> =
         postRepository.findAllDesc()?.map { PostsListsResponseDto.of(it) } ?: listOf()
-        //postRepository.findAllDesc()?.map { PostsListsResponseDto.of(it)}
+    // postRepository.findAllDesc()?.map { PostsListsResponseDto.of(it)}
 }
-

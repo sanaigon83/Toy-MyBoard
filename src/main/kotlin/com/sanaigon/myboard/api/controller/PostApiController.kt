@@ -1,16 +1,10 @@
 package com.sanaigon.myboard.api.controller
 
-import com.sanaigon.myboard.api.dto.PostsResponseDto
-import com.sanaigon.myboard.api.dto.PostsSaveRequestDto
-import com.sanaigon.myboard.api.dto.PostsUpdateRequestDto
+import com.sanaigon.myboard.domain.dto.PostsResponseDto
+import com.sanaigon.myboard.domain.dto.PostsSaveRequestDto
+import com.sanaigon.myboard.domain.dto.PostsUpdateRequestDto
 import com.sanaigon.myboard.service.PostsService
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("api/v1")
